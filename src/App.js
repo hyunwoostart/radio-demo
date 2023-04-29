@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import Question from "./components/Question";
+import { dummy } from "./questionDummy";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <RootWarap>
+      {dummy.map((item) => (
+        <Question key={item.idx} title={item.title} questionList={item.questionList} />
+      
+       ) )
+      
+      }
+   </RootWarap>
   );
 }
 
 export default App;
+
+const RootWarap = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 500px;
+
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  background: #fff;
+
+  padding: 20px;
+`;
