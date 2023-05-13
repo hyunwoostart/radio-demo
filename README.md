@@ -1,8 +1,4 @@
-form, radio 형식 코딩
-
-
-
-# Getting Started with Create React App
+# form, radio 형식 코딩
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
